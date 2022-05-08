@@ -1,4 +1,4 @@
-import {useState, useEffect} from "React";
+import {useState, useEffect} from "react";
 import Nav from "./components/Nav";
 import ProductList from "./components/ProductList";
 import BasketContainer from "./components/BasketContainer";
@@ -17,10 +17,12 @@ function App() {
     getProducts();
   }, []);
 
+  console.log(products);
+
   return (
     <div className={styles.App}>
       <Nav />
-      <ProductList />
+      <ProductList products={products}/>
       <BasketContainer />
     </div>
   );

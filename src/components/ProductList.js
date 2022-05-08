@@ -1,9 +1,9 @@
 import Product from "./Product";
 
-export default function ProductList() {
+export default function ProductList({products}) {
   return (
-    <section>
-      <Product />
+    <section className="product-list">
+      {products.map (p =><Product {...p}/>)}
     </section>
   );
 }
